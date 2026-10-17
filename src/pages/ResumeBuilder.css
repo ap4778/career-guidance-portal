@@ -1,0 +1,23 @@
+.resume-layout { display: grid; grid-template-columns: minmax(0,1fr) minmax(330px,.82fr); align-items: start; gap: 20px; }
+.resume-form { padding: 20px; }
+.resume-form-section { padding: 0 0 20px; margin-bottom: 19px; border-bottom: 1px solid var(--line); }
+.resume-form-section:last-of-type { padding-bottom: 0; margin-bottom: 10px; border-bottom: 0; }
+.resume-form-section > h2, .form-section-heading h2 { margin: 0 0 13px; font: 700 14px Manrope, sans-serif; }
+.resume-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.resume-fields .full-field { grid-column: 1 / -1; }
+.form-section-heading { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.repeat-entry { position: relative; display: grid; grid-template-columns: 1.1fr 1fr .55fr; align-items: end; gap: 9px; padding: 11px; margin-bottom: 9px; background: var(--canvas); border: 1px solid var(--line); border-radius: var(--radius-sm); }
+.project-entry { grid-template-columns: 1fr; align-items: start; }
+.project-entry .full-field { grid-column: auto; }
+.remove-entry { position: absolute; top: 4px; right: 3px; width: 27px; height: 27px; color: var(--red); }
+.repeat-entry .field-label input { padding-right: 28px; }
+.optional-label { color: var(--muted); font: 400 10px "DM Sans", sans-serif; }
+.autosave-note { display: flex; align-items: center; gap: 6px; margin: 16px 0 0; color: var(--green); font-size: 10px; }
+.preview-toolbar { display: flex; justify-content: space-between; align-items: center; margin: 0 1px 9px; }
+.preview-toolbar > span { display: flex; align-items: center; gap: 7px; color: var(--muted); font-size: 10px; }
+.preview-dot { width: 7px; height: 7px; background: var(--green); border-radius: 50%; }
+.theme-picker select { width: auto; padding: 7px 9px; font-size: 10px; }
+.resume-preview-column { position: sticky; top: 15px; }
+@media (max-width: 1000px) { .resume-layout { grid-template-columns: 1fr; } .resume-preview-column { position: static; max-width: 650px; margin: 0 auto; } }
+@media (max-width: 560px) { .resume-fields { grid-template-columns: 1fr; } .resume-fields .full-field { grid-column: auto; } .repeat-entry { grid-template-columns: 1fr; padding-top: 16px; } .resume-form { padding: 15px; } }
+@media print { .resume-builder-page { max-width: none; padding: 0 !important; } .resume-layout { display: block; } .resume-form, .resume-builder-page > .page-header, .preview-toolbar, .sidebar, .mobile-nav, .toast { display: none !important; } .resume-preview-column { display: block; position: static; max-width: none; margin: 0; } .resume-paper { width: 100%; min-height: 0; padding: 0; border: 0; border-radius: 0; box-shadow: none; } }

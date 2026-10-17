@@ -1,0 +1,5 @@
+.progress-wrap { width: 100%; }
+.progress-label { display: flex; align-items: center; justify-content: space-between; margin-bottom: 7px; color: var(--muted); font-size: 12px; }
+.progress-label strong { color: var(--text); font-size: 12px; }
+.progress-track { height: 5px; background: var(--line); overflow: hidden; border-radius: var(--radius-xs); }
+.progress-fill { display: block; height: 100%; border-radius: 0; background: var(--primary); transition: width .25s ease; }

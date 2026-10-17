@@ -1,0 +1,16 @@
+.onboarding-brand { display: flex; align-items: center; font: 600 22px var(--font-heading); }
+.onboarding-page { min-height: 100vh; padding: 27px clamp(18px,5vw,72px); background: var(--canvas); color: var(--text); }
+.onboarding-card { border-radius: var(--radius-sm); box-shadow: none; }
+.onboarding-card { width: min(620px,100%); margin: clamp(35px,9vh,90px) auto; padding: clamp(22px,4vw,36px); }
+.onboarding-card h1 { margin: 9px 0; font: 500 clamp(26px,4vw,32px)/1.2 var(--font-heading); letter-spacing: -.5px; }
+.onboarding-intro { margin: 0 0 25px; color: var(--muted); font-size: 14px; line-height: 1.6; }
+.onboarding-label { display: block; margin-bottom: 8px; font-size: 12px; font-weight: 700; }
+.onboarding-interests { margin: 23px 0 20px; padding: 0; border: 0; }
+.onboarding-interests legend { margin-bottom: 10px; font-size: 12px; font-weight: 700; }
+.onboarding-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.onboarding-chips button { display: inline-flex; align-items: center; gap: 5px; min-height: 36px; padding: 7px 10px; color: var(--text); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm); cursor: pointer; font-size: 13px; transition: background .15s,border-color .15s,color .15s; }
+.onboarding-chips button:hover, .onboarding-chips button.selected { color: var(--primary); background: var(--primary-soft); border-color: var(--primary); }
+.onboarding-error { margin: 0 0 12px; color: #ae4654; font-size: 11px; }
+.onboarding-submit { width: 100%; }
+.onboarding-storage-note { margin: 13px 0 0; color: var(--muted); text-align: center; font-size: 11px; }
+@media (max-width: 420px) { .onboarding-page { padding-right: 14px; padding-left: 14px; } .onboarding-card { padding: 20px 16px; } }

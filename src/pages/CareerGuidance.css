@@ -1,0 +1,25 @@
+.guidance-layout { display: grid; grid-template-columns: minmax(300px,.83fr) minmax(0,1.17fr); gap: 22px; align-items: start; }
+.guidance-form { position: sticky; top: 20px; padding: 21px; }
+.guidance-form > .section-heading { margin-bottom: 19px; }
+.form-intro { margin: 5px 0 0; color: var(--muted); font-size: 11px; }
+.guidance-form > .field-label { margin-bottom: 8px; }
+.interest-fieldset { margin: 19px 0 17px; padding: 0; border: 0; }
+.interest-fieldset legend { margin-bottom: 9px; font-size: 12px; font-weight: 700; }
+.interest-chips { display: flex; flex-wrap: wrap; gap: 7px; }
+.interest-chip { min-height: 34px; padding: 7px 9px; color: var(--muted); background: transparent; border: 1px solid var(--line); border-radius: var(--radius-sm); cursor: pointer; font-size: 12px; transition: background .15s,color .15s,border-color .15s; }
+.interest-chip:hover, .interest-chip.selected { color: var(--primary); border-color: var(--primary); background: var(--primary-soft); }
+.form-two-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 18px; }
+.form-two-columns select { margin-top: 1px; }
+.recommendation-button { width: 100%; }
+.privacy-note { margin: 11px 0 0; color: var(--muted); font-size: 11px; line-height: 1.5; }
+.recommendations-area > .section-heading { margin: 1px 0 13px; }
+.career-results { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+.career-results .career-card:first-child { grid-column: 1 / -1; }
+.career-results .career-card:first-child .career-skill-lists { grid-template-columns: 1fr 1fr; }
+.algorithm-explainer { display: flex; gap: 10px; margin-top: 14px; padding: 13px 0; color: var(--primary); background: transparent; border-top: 1px solid var(--line); border-radius: 0; }
+.algorithm-explainer > svg { flex: 0 0 auto; margin-top: 2px; }
+.algorithm-explainer p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
+.algorithm-explainer strong { color: var(--text); font-size: 13px; }
+.recommendations-area .empty-state { padding: 55px 22px; }
+@media (max-width: 950px) { .guidance-layout { grid-template-columns: 1fr; } .guidance-form { position: static; } }
+@media (max-width: 560px) { .career-results { grid-template-columns: 1fr; } .career-results .career-card:first-child { grid-column: auto; } .career-results .career-card:first-child .career-skill-lists { grid-template-columns: 1fr; } .form-two-columns { grid-template-columns: 1fr; } }

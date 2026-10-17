@@ -1,0 +1,16 @@
+.resume-paper { width: 100%; min-height: 680px; padding: 42px 40px; color: #292722; background: #fff; border: 1px solid #e4e0d8; border-radius: 5px; box-shadow: none; font-family: "Segoe UI", Arial, sans-serif; }
+.resume-heading { padding-bottom: 17px; border-bottom: 2px solid #1f5c4a; }
+.resume-heading h1 { margin: 0 0 6px; color: #1c1b19; font: 600 25px Georgia, "Times New Roman", serif; }
+.resume-heading p { margin: 0; color: #6b675f; font-size: 10px; }
+.resume-paper section { margin-top: 20px; }
+.resume-paper section h2 { margin: 0 0 8px; color: #1f5c4a; font: 600 11px "Segoe UI", Arial, sans-serif; letter-spacing: .3px; text-transform: uppercase; }
+.resume-paper section p { margin: 0; color: #45423c; font-size: 10px; line-height: 1.6; white-space: pre-line; }
+.resume-entry { display: flex; flex-direction: column; gap: 3px; margin: 8px 0; font-size: 10px; }
+.resume-entry strong { color: #292722; }
+.resume-entry span, .resume-entry p { color: #6b675f; }
+.resume-entry p { margin: 0; }
+.resume-preserve-lines { white-space: pre-line !important; }
+.resume-modern .resume-heading { padding: 18px; border: 0; border-left: 4px solid #1f5c4a; background: #f4f1eb; }
+.resume-modern .resume-heading h1 { color: #1c1b19; }
+.resume-modern section h2 { padding-bottom: 6px; border-bottom: 1px solid #e4e0d8; }
+@media (max-width: 1000px) { .resume-paper { min-height: 580px; padding: 32px 28px; } }

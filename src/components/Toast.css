@@ -1,0 +1,5 @@
+.toast { position: fixed; z-index: 30; right: 24px; bottom: 24px; display: flex; align-items: center; gap: 10px; max-width: calc(100vw - 32px); padding: 11px 13px; color: var(--text); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm); box-shadow: none; font-size: 13px; }
+.toast > svg { flex: 0 0 auto; color: var(--primary); }
+.toast .icon-button { color: var(--muted); width: 26px; height: 26px; }
+.toast .icon-button:hover { color: var(--text); background: var(--primary-soft); }
+@media (max-width: 760px) { .toast { right: 12px; bottom: 15px; } }

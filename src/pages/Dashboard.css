@@ -1,0 +1,47 @@
+.welcome-row { margin-bottom: 24px; }
+.welcome-heading { display: flex; align-items: center; gap: 13px; }
+.welcome-heading h1 { margin: 5px 0 3px; }
+.welcome-heading h1 span { font-size: 23px; }
+.welcome-heading input { width: 210px; padding: 5px 8px; color: var(--text); border: 1px solid var(--primary); border-radius: 6px; background: var(--surface); font: 700 24px Manrope, sans-serif; }
+.subtle-button { padding: 5px 7px; color: var(--muted); border: 0; background: transparent; cursor: pointer; font-size: 10px; }
+.subtle-button:hover { color: var(--primary); }
+.stat-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 12px; margin-bottom: 17px; }
+.dashboard-main-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 16px; }
+.overview-panel, .application-chart, .skill-progress-panel { padding: 19px; }
+.overview-highlight { display: flex; align-items: center; gap: 12px; margin: 20px 0 17px; padding: 14px; background: var(--canvas); border: 1px solid var(--line); border-radius: 5px; }
+.overview-orb { display: grid; place-items: center; width: 37px; height: 37px; flex: 0 0 auto; color: var(--muted); background: transparent; border: 1px solid var(--line); border-radius: 4px; }
+.overview-highlight > div:nth-child(2) { flex: 1; min-width: 0; }
+.muted-label { color: var(--muted); font-size: 11px; font-weight: 600; }
+.overview-highlight h3 { margin: 3px 0; font: 600 17px var(--font-heading); }
+.overview-highlight p { margin: 0; color: var(--muted); font-size: 12px; }
+.overview-score { color: var(--primary); font: 600 21px var(--font-heading); }
+.overview-links { display: flex; gap: 19px; margin-top: 17px; }
+.overview-links a { display: inline-flex; align-items: center; gap: 5px; color: var(--primary); font-size: 12px; font-weight: 600; }
+.chart-total { display: flex; align-items: baseline; gap: 8px; margin: 19px 0 8px; }
+.chart-total strong { font: 800 25px Manrope, sans-serif; }
+.chart-total span { color: var(--muted); font-size: 10px; }
+.bar-chart { display: flex; align-items: stretch; justify-content: space-around; height: 120px; padding: 2px 10px 0; border-bottom: 1px solid var(--line); }
+.chart-column { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; width: 18%; }
+.chart-bar-area { display: flex; align-items: flex-end; justify-content: center; gap: 5px; width: 100%; height: 96px; }
+.chart-bar { width: min(28px, 48%); min-height: 6px; background: var(--primary); border-radius: 2px 2px 0 0; }
+.chart-bar-area b { margin-bottom: 2px; color: var(--muted); font-size: 9px; }
+.chart-label { margin: 8px 0; color: var(--muted); font-size: 9px; }
+.dashboard-lower-grid { display: grid; grid-template-columns: 1.5fr .65fr; gap: 19px; margin-top: 25px; }
+.section-block > .section-heading { margin-bottom: 12px; }
+.dashboard-job-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; }
+.dashboard-job-grid .job-card { min-height: 218px; padding: 13px; }
+.dashboard-job-grid .job-title-row { flex-wrap: wrap; }
+.dashboard-job-grid .job-title-row h3 { font-size: 11px; }
+.skill-progress-panel { align-self: start; }
+.learning-stat { display: flex; align-items: baseline; gap: 8px; margin: 22px 0 9px; }
+.learning-stat strong { color: var(--primary); font: 800 31px Manrope, sans-serif; }
+.learning-stat span, .roadmap-summary { color: var(--muted); font-size: 10px; }
+.roadmap-summary { margin: 12px 0 17px; line-height: 1.5; }
+.dashboard-phase-progress { display: grid; gap: 10px; margin-top: 15px; }
+.dashboard-phase-progress .progress-label { margin-bottom: 5px; font-size: 9px; }
+.dashboard-phase-progress .progress-label strong { font-size: 9px; }
+.dashboard-phase-progress .progress-track { height: 4px; }
+.skill-progress-panel .button { width: 100%; padding: 9px; font-size: 11px; }
+@media (max-width: 1100px) { .dashboard-job-grid { grid-template-columns: 1fr; } .dashboard-job-grid .job-card { min-height: 205px; } }
+@media (max-width: 900px) { .stat-grid { grid-template-columns: repeat(2,1fr); } .dashboard-main-grid, .dashboard-lower-grid { grid-template-columns: 1fr; } .dashboard-job-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media (max-width: 560px) { .dashboard-job-grid { grid-template-columns: 1fr; } .welcome-heading { flex-wrap: wrap; } .welcome-row > .button { width: 100%; } .overview-links { flex-direction: column; gap: 10px; } }

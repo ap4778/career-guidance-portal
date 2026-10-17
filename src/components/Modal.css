@@ -1,0 +1,5 @@
+.modal-backdrop { position: fixed; z-index: 20; inset: 0; display: grid; place-items: center; padding: 20px; background: rgba(28, 27, 25, .48); }
+.modal-panel { width: min(540px, 100%); max-height: min(85vh, 720px); overflow: auto; background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: var(--radius-sm); box-shadow: none; }
+.modal-header { position: sticky; top: 0; display: flex; justify-content: space-between; align-items: center; padding: 18px 21px; background: var(--surface); border-bottom: 1px solid var(--line); z-index: 1; }
+.modal-header h2 { margin: 0; font: 700 18px Manrope, sans-serif; }
+.modal-content { padding: 20px 22px 24px; }

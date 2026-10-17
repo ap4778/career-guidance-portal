@@ -1,0 +1,157 @@
+.job-card {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) auto;
+  gap: 13px;
+  min-width: 0;
+  padding: 15px 16px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  transition: background .15s;
+}
+
+.job-card:hover {
+  background: color-mix(in srgb, var(--surface) 96%, var(--primary) 4%);
+}
+
+.company-monogram {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xs);
+  font: 600 13px var(--font-body);
+}
+
+.job-card-main {
+  min-width: 0;
+}
+
+.job-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.job-title-row h3 {
+  margin: 0;
+  color: var(--text);
+  font: 600 15px/1.35 var(--font-body);
+}
+
+.job-company {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.match-text {
+  flex: 0 0 auto;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.job-description {
+  margin: 7px 0 8px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.job-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 15px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.job-meta strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.job-skills-text {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.job-posted {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.job-card-actions {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding-top: 1px;
+}
+
+.save-job-button,
+.job-details-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 5px 0;
+  color: var(--muted);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.save-job-button:hover,
+.job-details-button:hover,
+.save-job-button.is-saved {
+  color: var(--primary);
+}
+
+.dashboard-job-grid .job-card {
+  grid-template-columns: 30px minmax(0, 1fr);
+  padding: 13px;
+}
+
+.dashboard-job-grid .company-monogram {
+  width: 28px;
+  height: 28px;
+}
+
+.dashboard-job-grid .job-card-actions {
+  grid-column: 2;
+  justify-content: flex-start;
+}
+
+@media (max-width: 640px) {
+  .job-card {
+    grid-template-columns: 30px minmax(0, 1fr);
+    gap: 10px;
+    padding: 13px;
+  }
+
+  .company-monogram {
+    width: 28px;
+    height: 28px;
+  }
+
+  .job-card-actions {
+    grid-column: 2;
+    justify-content: flex-start;
+    gap: 15px;
+  }
+
+  .job-title-row h3 {
+    font-size: 14px;
+  }
+}

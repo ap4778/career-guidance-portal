@@ -1,0 +1,125 @@
+.career-card {
+  padding: 17px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  box-shadow: none;
+}
+
+.career-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 9px;
+}
+
+.career-rank {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.match-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  color: var(--primary);
+  background: transparent;
+  border-radius: 0;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.career-card h3 {
+  margin: 0;
+  font: 600 18px var(--font-heading);
+}
+
+.career-description {
+  min-height: 36px;
+  margin: 6px 0 14px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.career-detail-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.career-detail-row > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--muted);
+}
+
+.career-detail-row strong {
+  text-align: right;
+  font-weight: 600;
+}
+
+.career-reason {
+  margin-top: 13px;
+  padding: 10px;
+  background: var(--canvas);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+}
+
+.career-reason strong,
+.list-heading {
+  font-size: 12px;
+}
+
+.career-reason p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.career-skill-lists {
+  display: grid;
+  gap: 10px;
+  margin-top: 13px;
+}
+
+.list-heading {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--muted);
+}
+
+.mini-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.mini-tags > span,
+.mini-tags.missing > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 4px 6px;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xs);
+  font-size: 11px;
+}
+
+.mini-tags em {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.career-card .text-button {
+  margin-top: 12px;
+}
