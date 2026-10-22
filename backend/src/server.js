@@ -1,6 +1,8 @@
 import { app } from "./app.js";
-import { env } from "./config/env.js";
+import { ensureRuntimeEnv, env } from "./config/env.js";
 import { pool } from "./config/database.js";
+
+ensureRuntimeEnv();
 
 const server = app.listen(env.port, async () => {
   try {

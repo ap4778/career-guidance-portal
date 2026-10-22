@@ -9,19 +9,25 @@ export function AuthProvider({ children }) {
   const [error, setError] = useState("");
 
   const refreshUser = useCallback(async () => {
-    try {
-      const result = await api("/auth/me");
-      setUser(result.user);
-      setError("");
-      return result.user;
-    } catch (cause) {
-      if (cause instanceof ApiError && cause.status === 401) {
-        setUser(null);
+    for (let attempt = 0; attempt < 3; attempt += 1) {
+      try {
+        const result = await api("/auth/me");
+        setUser(result.user);
         setError("");
-        return null;
+        return result.user;
+      } catch (cause) {
+        if (cause instanceof ApiError && cause.status === 401) {
+          setUser(null);
+          setError("");
+          return null;
+        }
+        const retryable = cause instanceof ApiError && (cause.status === 0 || cause.status >= 500);
+        if (!retryable || attempt === 2) {
+          setError(cause.message || "Could not connect to the backend.");
+          throw cause;
+        }
+        await new Promise((resolve) => window.setTimeout(resolve, 700 * (attempt + 1)));
       }
-      setError(cause.message || "Could not connect to the backend.");
-      throw cause;
     }
   }, []);
 
